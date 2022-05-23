@@ -1,0 +1,21 @@
+In C++ this keyword is actually a pointer who has the address of a object
+that has been created in driver function. We use this keyword or pointer in
+parameterized constructors to distiguish between class member variables and
+formal para meters of a function. When we use this pointer the compiler
+understand that we are talking about class member variables. e.g
+
+class employee{
+    string name;
+    int height;
+    char gender;
+public:
+    employee(string name, int height, char gender){
+        this->name = name;
+        this->height = height;
+        this->gender = gender;
+    }
+};
+
+If we don't use this keyword in above example than it does not make sense
+to compiler that of which name, height, gender we are talking about is it
+class members or formal parameters of constructor.
